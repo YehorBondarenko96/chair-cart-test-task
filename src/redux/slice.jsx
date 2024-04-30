@@ -6,12 +6,14 @@ const initialState = {
     {
       id: nanoid(),
       title: 'NATURAL HARMONY: WOODEN FOLDING CHAIR',
-      image: '../../src/assets/first-chair.png'
+      image: '../../src/assets/first-chair.png',
+      to: '/chair-card'
     },
     {
       id: nanoid(),
       title: 'Glideride 2',
-      image: '../../src/assets/first-shoes.png'
+      image: '../../src/assets/first-shoes.png',
+      to: '/shoes-card'
       }
   ],
   screenWidth: null

@@ -9,6 +9,12 @@ transition: box-shadow 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 `;
 
+export const DivImage = styled.div`
+overflow: hidden;
+display: flex;
+align-items: center;
+`;
+
 export const Image = styled.img`
 width: 100%;
 object-fit: cover;

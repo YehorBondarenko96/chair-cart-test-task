@@ -3,6 +3,10 @@ import SharedLayout from 'components/SharedLayout/SharedLayout';
 import { AppWrapper } from './App.styled';
 import { HomePage } from './pages/HomePage/HomePage';
 import { Navigate } from 'react-router-dom';
+import { lazy } from 'react';
+
+const ChairCard = lazy(() => import('./pages/ChairCard/ChairCard'));
+const ShoesCard = lazy(() => import('./pages/ShoesCard/ShoesCard'));
 
 function App() {
   return (
@@ -10,10 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage/>}/>
-          {/* <Route path="/first" element={<FirstPage />} /> */}
-          {/* <Route path="/second" element={<SecondPage />}>
-            <Route path=":half" element={<HalfPage />} />
-          </Route> */}
+          <Route path="/chair-card" element={<ChairCard />} />
+          <Route path="/shoes-card" element={<ShoesCard />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
