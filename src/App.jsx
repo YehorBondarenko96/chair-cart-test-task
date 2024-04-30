@@ -14,8 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage/>}/>
-          <Route path="/chair-card" element={<ChairCard />} />
-          <Route path="/shoes-card" element={<ShoesCard />} />
+          <Route path="/chair-card/:id" element={<ChairCard />} />
+          <Route path="/shoes-card/:id" element={<ShoesCard />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

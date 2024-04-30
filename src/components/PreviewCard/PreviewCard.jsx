@@ -10,6 +10,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export const PreviewCard = ({ item }) => { 
+
   const realScreenWidth = useSelector(selectScreenWidth);
 
   const liRef = useRef(null);
@@ -34,10 +35,10 @@ export const PreviewCard = ({ item }) => {
   }, [realScreenWidth]);
   
   return (
-    <Link to={item.to}>
+    <Link to={`${item.to}/${item.id}`}>
     <Li ref={liRef}>
       <DivImage ref={divImageRef}>
-        <Image src={item.image} />
+        <Image src={item.titleImage} />
       </DivImage>
       <Title>
         {item.title}
