@@ -9,7 +9,7 @@ import {
   IconButton
 } from "./ChairCard.styled";
 import { useEffect, useRef } from "react";
-import sprite from 'assets/sprite.svg';
+import sprite from '../../assets/sprite.svg';
 
 const ChairCard = () => { 
   const {id} = useParams();

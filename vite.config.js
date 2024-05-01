@@ -9,7 +9,7 @@ export default defineConfig({
           src: '/src',
           components: '/src/components',
           pages: '/src/pages',
-          assets: './src/assets'
+          // assets: './src/assets'
         },
       },
       base: '/chair-cart-test-task',
