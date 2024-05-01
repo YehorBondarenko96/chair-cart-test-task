@@ -4,16 +4,26 @@ import {
 } from "./Card.styled";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectScreenWidth } from "../../redux/selectors";
 
-export const Card = ({children}) => { 
+export const Card = ({ children }) => { 
+  const realScreenWidth = useSelector(selectScreenWidth);
   const navigate = useNavigate();
 
   const backdropChairRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    if (backdropChairRef.current) {
+    if (backdropChairRef.current && containerRef.current) {
+      const screenWidth = realScreenWidth > 1000 ? 1000 : realScreenWidth;
+      const coef = 2;
     
-    const backdropChair = backdropChairRef.current;
+      const backdropChair = backdropChairRef.current;
+      const container = containerRef.current;
+
+      container.style.padding = `${screenWidth / (coef * 21)}px ${screenWidth / (coef * 10)}px`;
+      
 
     const handelClickBackdrop = (e) => {
         if (e.target.classList.contains('backdropChair')) {
@@ -41,11 +51,11 @@ export const Card = ({children}) => {
         window.removeEventListener('keydown', onEscPress);
       };
         }
-  }, [navigate]);
+  }, [navigate, realScreenWidth]);
 
   return (
     <Backdrop ref={backdropChairRef} className="backdropChair">
-      <Container>
+      <Container ref={containerRef}>
         {children}
       </Container>
     </Backdrop>

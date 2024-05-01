@@ -17,7 +17,6 @@ export const Container = styled.div`
   display: inline-block;
   width: 100%;
   margin: 40px 20px;
-  padding: 24px 12px;
   border-radius: 10px;
   background-color: #fff;
   position: relative;

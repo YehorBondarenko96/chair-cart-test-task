@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DivImages = styled.div`
-
+display: flex;
 `;
 
 export const DivListImages = styled.div`
@@ -16,8 +16,13 @@ background-color: transparent;
 `;
 
 export const IconButton = styled.svg`
-  width: ${(props) => props.size || '36px'};
-  height: ${(props) => props.size || '36px'};
+  width: ${(props) => props.size || '20px'};
+  height: ${(props) => props.size || '20px'};
   fill: ${(props) => props.color || '#000'};
   display: inline-block;
+`;
+
+export const BigImg = styled.img`
+height: 100%;
+object-fit: cover;
 `;

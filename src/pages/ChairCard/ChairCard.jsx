@@ -7,7 +7,8 @@ import {
   DivImages,
   DivListImages,
   Button,
-  IconButton
+  IconButton,
+  BigImg
 } from "./ChairCard.styled";
 import { useEffect, useRef } from "react";
 import sprite from '../../assets/sprite.svg';
@@ -27,7 +28,9 @@ const ChairCard = () => {
 
       const divImages = divImagesRef.current;
 
-      divImages.style.height = screenWidth / (coef * 2) + 'px';
+      divImages.style.height = screenWidth / (coef * 1.5) + 'px';
+      divImages.style.gap = screenWidth / (coef * 15) + 'px';
+
     }
   }, [realScreenWidth]);
 
@@ -48,6 +51,7 @@ const ChairCard = () => {
             </IconButton>
           </Button>
           </DivListImages>
+          <BigImg src={ chair.titleImage } alt={chair.title} />
         </DivImages>
       }
     </Card>
