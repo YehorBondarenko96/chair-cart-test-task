@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { UlChairsPhoto } from "../../components/UlChairsPhoto/UlChairsPhoto";
 import {
   DivImages,
+  DivListImages,
   Button,
   IconButton
 } from "./ChairCard.styled";
@@ -34,7 +35,8 @@ const ChairCard = () => {
     <Card>
       {chair &&
         <DivImages ref={divImagesRef}>
-          <Button>
+          <DivListImages>
+            <Button>
             <IconButton>
             <use href={`${sprite}#arrow-up`} />
             </IconButton>
@@ -45,6 +47,7 @@ const ChairCard = () => {
             <use href={`${sprite}#arrow-down`} />
             </IconButton>
           </Button>
+          </DivListImages>
         </DivImages>
       }
     </Card>

@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const DivImages = styled.div`
+
+`;
+
+export const DivListImages = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
+height: 100%;
 `;
 
 export const Button = styled.button`
