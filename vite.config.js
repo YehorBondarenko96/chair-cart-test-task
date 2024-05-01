@@ -12,5 +12,5 @@ export default defineConfig({
           assets: '/src/assets'
         },
       },
-      base: '/chair-cart-test-task/everything-shop',
+      base: '/chair-cart-test-task',
     });
